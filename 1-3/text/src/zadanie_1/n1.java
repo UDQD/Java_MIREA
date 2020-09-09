@@ -13,7 +13,3 @@ public class n1
     }
 }
 
-//class Book
-//{
-//
-//}

@@ -25,7 +25,7 @@ public class Ball {
     }
 
     public String toString() {
-        return this.name +' '+ this.weight+' '+ this.coord[0]+' '+this.coord[1];
+        return this.name + ' ' + this.weight + ' ' + this.coord[0] + ' ' + this.coord[1];
     }
 
 
