@@ -10,6 +10,7 @@ public class n1
         System.out.println(a);
         Ball b = new Ball("sdff", 0.01, 23, 56);
         System.out.println(b);
+
     }
 }
 

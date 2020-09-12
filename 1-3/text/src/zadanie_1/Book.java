@@ -5,7 +5,6 @@ public class Book {
     private String name;
     private int number_of_pages;
 
-    //конструктор (3шт)
     public Book() {
         this.name = "Some book";
         this.number_of_pages = 42;
