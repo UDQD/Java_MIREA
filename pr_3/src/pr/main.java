@@ -1,8 +1,6 @@
 package pr;
 
 
-
-
 public class main {
     public static void main(String[] args) {
 
@@ -60,6 +58,12 @@ public class main {
         System.out.println(sq1.getColor());
         System.out.println(sq1.getSide());
         System.out.println(sq1.getLength());
+
+        MovablePoint a = new MovablePoint(1,1,1,1);
+        a.moveUp();
+        System.out.print(a.y);
+
     }
+
 
 }
