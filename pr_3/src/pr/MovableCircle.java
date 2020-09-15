@@ -17,4 +17,7 @@ public class MovableCircle implements Movable{
     public void moveDown(){this.center.y--;};
     public void moveLeft(){this.center.x--;};
     public void moveRight(){this.center.x++;};
+
+
 }
+
