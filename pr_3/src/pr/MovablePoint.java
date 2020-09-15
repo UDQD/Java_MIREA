@@ -9,7 +9,9 @@ public class MovablePoint implements Movable {
     public MovablePoint(int x, int y, int xSpeed, int ySpeed){
         this.x = x;
         this.y = y;
-        this
+        this.xSpeed = xSpeed;
+        this.ySpeed = ySpeed;
+//        this
     };
     @Override
     public String toString(){return "point";};
