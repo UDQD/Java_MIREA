@@ -6,130 +6,41 @@ import javax.swing.*;
 
 
 public class Frame extends JFrame {
-    JTextField jta = new JTextField(25);
-    JTextField jta2 = new JTextField(25);
-    JTextArea txtArea = new JTextArea(1,26);
 
-    JButton but1 = new JButton("+");
-    JButton but2 = new JButton("-");
-    JButton but3 = new JButton("X");
-    JButton but4 = new JButton("/");
+    JButton milan_but = new JButton("AC Milan");
+    JButton madrid_but = new JButton("Real Madrid");
+    JLabel result_lable = new JLabel("Result: 0 X 0");
+    JLabel last_lable = new JLabel("Last Scorer: N/A");
+    JLabel winner_lable = new JLabel("Winner: DRAW");
+    Frame(Score score){
 
-    boolean chek(String x){
-        try{
-            Double.parseDouble(x);
-            return true;
-        }catch (NumberFormatException e){
-            return false;
+        super("Score");
+        JPanel[] pnl = new JPanel[9];
+        setLayout(new GridLayout(3,3));
+
+        for(int i = 0 ; i < pnl.length ; i++){
+            pnl[i] = new JPanel();
+            add(pnl[i]);
         }
-    }
-
-    Font fnt = new Font("Times new roman",Font.BOLD,20);
-    Frame()
-    {
-
-
-        super("Example");
-        setLayout(new FlowLayout());
-        setSize(500,200);
-
-
-
-        add(jta);
-        jta.setForeground(Color.RED);
-        jta.setFont(fnt);
-
-        add(jta2);
-        jta2.setForeground(Color.RED);
-        jta2.setFont(fnt);
-
-        add(txtArea);
-        txtArea.setFont(fnt);
-
-        add(but1);
-        add(but2);
-        add(but3);
-        add(but4);
-        but1.addActionListener(new ActionListener() {
+        milan_but.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (jta.getText().equals("") || !chek(jta.getText())) {
-                    jta.setText("0");
-                }
-                if (jta2.getText().equals("") || !chek(jta2.getText())) {
-                    jta2.setText("0");
-                }
-                double a = Double.parseDouble(jta.getText());
-//                System.out.println("a = "+a);
-                double b = Double.parseDouble(jta2.getText());
-//                System.out.println("b = "+b);
-                double c = a + b;
-//                System.out.println("c = "+c);
-                txtArea.setText(String.valueOf(c));
-
-
-            }
-        });
-        but2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (jta.getText().equals("") || !chek(jta.getText())) {
-                    jta.setText("0");
-                }
-                if (jta2.getText().equals("") || !chek(jta2.getText())) {
-                    jta2.setText("0");
-                }
-                double a = Double.parseDouble(jta.getText());
-                System.out.println("a = "+a);
-                double b = Double.parseDouble(jta2.getText());
-                System.out.println("b = "+b);
-                double c = a - b;
-                System.out.println("c = "+c);
-                txtArea.setText(String.valueOf(c));
-
-            }
-        });
-        but3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (jta.getText().equals("") || !chek(jta.getText())) {
-                    jta.setText("0");
-                }
-                if (jta2.getText().equals("") || !chek(jta2.getText())) {
-                    jta2.setText("0");
-                }
-                double a = Double.parseDouble(jta.getText());
-                System.out.println("a = "+a);
-                double b = Double.parseDouble(jta2.getText());
-                System.out.println("b = "+b);
-                double c = a * b;
-                System.out.println("c = "+c);
-                txtArea.setText(String.valueOf(c));
-
-            }
-        });
-        but4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (jta.getText().equals("") || !chek(jta.getText())) {
-                    jta.setText("0");
-                }
-                if (jta2.getText().equals("") || !chek(jta2.getText())) {
-                    jta2.setText("0");
-                }
-                double a = Double.parseDouble(jta.getText());
-                System.out.println("a = "+a);
-                double b = Double.parseDouble(jta2.getText());
-                System.out.println("b = "+b);
-                double c = a / b;
-                System.out.println("c = "+c);
-                txtArea.setText(String.valueOf(c));
 
             }
         });
 
+        setSize(500,300);
+        pnl[0].add(milan_but);
+        pnl[2].add(madrid_but);
+        pnl[1].add(result_lable);
+        pnl[4].add(last_lable);
+        pnl[7].add(winner_lable);
         setVisible(true);
+
     }
+
+
+
 
 
 }
