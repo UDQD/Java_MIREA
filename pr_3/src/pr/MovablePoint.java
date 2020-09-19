@@ -13,8 +13,20 @@ public class MovablePoint implements Movable {
         this.ySpeed = ySpeed;
 //        this
     };
+
     @Override
-    public String toString(){return "point";};
+    public String toString() {
+        return "MovablePoint{" +
+                "x=" + x +
+                ", y=" + y +
+                ", xSpeed=" + xSpeed +
+                ", ySpeed=" + ySpeed +
+                '}';
+    }
+
+    @Override
+    //public String toString(){return "point";};
+
     public void moveUp(){this.y++;};
     public void moveDown(){this.y--;};
     public void moveLeft(){this.x--;};

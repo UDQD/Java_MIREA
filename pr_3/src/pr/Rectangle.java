@@ -64,8 +64,17 @@ public class Rectangle extends Shape {
 
     ;
 
+//    public String toString() {
+//        return "Rectangle";
+//    }
+
+
+    @Override
     public String toString() {
-        return "Rectangle";
+        return "Rectangle{" +
+                "width=" + width +
+                ", length=" + length +
+                '}';
     }
 
     ;

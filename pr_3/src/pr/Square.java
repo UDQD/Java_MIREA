@@ -49,8 +49,14 @@ public class Square extends Rectangle {
 
     ;
 
+//    public String toString() {
+//        return "Square";
+//    }
+
+
+    @Override
     public String toString() {
-        return "Square";
+        return super.toString();
     }
 
     ;
