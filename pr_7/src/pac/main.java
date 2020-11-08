@@ -13,11 +13,10 @@ public class main {
 //        d1.out_queue();
 //        d2.out_queue();
 
-        Game game_1 = new Game(d1,d2);
+        Game game_1 = new Game(d1, d2);
         game_1.play();
 
     }
-
 
 
 }
